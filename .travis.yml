@@ -1,0 +1,9 @@
+language: php
+php:
+  - '7.0'
+install:
+  - composer install
+before_script:
+  - cp phpunit.xml.dist phpunit.xml
+script:
+  - ./vendor/bin/phpunit --debug

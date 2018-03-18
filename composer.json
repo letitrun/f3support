@@ -1,0 +1,29 @@
+{
+    "name": "letitrun/f3support",
+    "description": "Support for f3 application",
+    "type": "library",
+    "authors": [
+        {
+            "name": "jitendra-1217",
+            "email": "jitendraojha1217@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "bcosca/fatfree-core": "^3.6",
+        "rakit/validation": "^0.14.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.*"
+    },
+    "bin": ["bin/f3support"],
+    "autoload": {
+        "classmap": ["tests"],
+        "psr-4": {
+            "Letitrun\\F3Support\\": "src/"
+        },
+        "files": [
+            "src/lib/helpers.php"
+        ]
+    }
+}
