@@ -16,14 +16,9 @@ class Handler
      */
     public function handle(Throwable $e)
     {
-        $response = [
-            'success'  => false,
-            'response' => [
-                'code'  => $e instanceof Exception ? $e->publicCode() : Code::ERROR_UNKNOWN,
-                'extra' => $e instanceof Exception ? $e->publicExtra() : [],
-            ],
-        ];
+        $code  = $e instanceof Exception ? $e->publicCode() : Code::ERROR_UNKNOWN;
+        $extra = $e instanceof Exception ? $e->publicExtra() : [];
 
-        (new JsonResponse)->error($response);
+        (new JsonResponse)->error(compact('code', 'extra'));
     }
 }
