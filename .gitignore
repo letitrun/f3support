@@ -1,6 +1,5 @@
 # Ignores vendor/*
 vendor
-
 composer.lock
-
 phpunit.xml
+src/.env
