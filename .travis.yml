@@ -6,4 +6,5 @@ install:
 before_script:
   - cp phpunit.xml.dist phpunit.xml
 script:
+  - ./vendor/bin/phpcs --standard=PSR2 --colors --report=summary --extensions=php,inc,lib --ignore=vendor ./
   - ./vendor/bin/phpunit --debug

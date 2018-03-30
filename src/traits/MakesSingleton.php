@@ -4,7 +4,7 @@ namespace Letitrun\F3Support\Traits;
 
 trait MakesSingleton
 {
-    static $instance;
+    public static $instance;
 
     public static function instance()
     {

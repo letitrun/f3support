@@ -17,13 +17,11 @@ function env(string $k, $default = null)
 {
     $v = getenv($k);
 
-    if ($v === false)
-    {
+    if ($v === false) {
         return $default;
     }
 
-    switch ($v)
-    {
+    switch ($v) {
         case 'true':
             return true;
         case 'false':

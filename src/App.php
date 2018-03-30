@@ -24,13 +24,16 @@ class App
 
     public function registerErrorHandler(Handler $handler)
     {
-        $this->f3->set('ONERROR', function (Base $f3) use ($handler) { $handler->handle($f3->get('EXCEPTION')); });
+        $callback = function (Base $f3) use ($handler) {
+            $handler->handle($f3->get('EXCEPTION'));
+        }
+
+        $this->f3->set('ONERROR', $callback);
     }
 
     public function registerRoutes(string $path)
     {
-        foreach (require_once $path as $route)
-        {
+        foreach (require_once $path as $route) {
             // E.g. ('GET @health_status /health/status', 'Letitrun\F3Support\Http\HealthController->getStatus')
             $this->f3->route($route[0].' @'.$route[1].': '.$route[2], $route[3].'->'.$route[4]);
         }
