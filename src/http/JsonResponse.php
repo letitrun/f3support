@@ -16,9 +16,7 @@ class JsonResponse extends Response
 
     public function json(int $code, $v, array $headers = [])
     {
-        // Adds one specific header value
         $headers['Content-type'] = 'application/json';
-
         $this->send($code, json_encode($v), $headers);
     }
 }

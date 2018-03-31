@@ -6,7 +6,7 @@ trait MakesSingleton
 {
     public static $instance;
 
-    public static function instance()
+    public static function getInstance()
     {
         return static::$instance ?: static::$instance = new static;
     }

@@ -16,12 +16,12 @@ class InvalidInput extends Exception
         $this->validation = $validation;
     }
 
-    public function publicCode(): string
+    public function getPublicCode(): string
     {
         return Code::ERROR_INVALID_INPUT;
     }
 
-    public function publicExtra(): array
+    public function getPublicExtra(): array
     {
         return $this->validation->errors()->all();
     }

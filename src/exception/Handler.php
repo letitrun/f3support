@@ -9,9 +9,8 @@ class Handler
 {
     public function handle(Throwable $e)
     {
-        $code  = $e instanceof Exception ? $e->publicCode() : Code::ERROR_UNKNOWN;
-        $extra = $e instanceof Exception ? $e->publicExtra() : [];
-
+        $code  = $e instanceof Exception ? $e->getPublicCode()  : Code::ERROR_UNKNOWN;
+        $extra = $e instanceof Exception ? $e->getPublicExtra() : [];
         (new JsonResponse)->error(compact('code', 'extra'));
     }
 }

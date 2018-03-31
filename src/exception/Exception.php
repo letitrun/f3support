@@ -6,7 +6,7 @@ use Exception as PhpException;
 
 abstract class Exception extends PhpException
 {
-    abstract public function publicCode(): string;
+    abstract public function getPublicCode(): string;
 
-    abstract public function publicExtra(): array;
+    abstract public function getPublicExtra(): array;
 }

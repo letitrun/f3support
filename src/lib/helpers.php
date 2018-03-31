@@ -16,11 +16,9 @@
 function env(string $k, $default = null)
 {
     $v = getenv($k);
-
     if ($v === false) {
         return $default;
     }
-
     switch ($v) {
         case 'true':
             return true;
