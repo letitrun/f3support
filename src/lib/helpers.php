@@ -49,9 +49,15 @@ function list_unique(array $v): array
     return array_values(array_unique($v));
 }
 
-function array_pull(array & $v, $k)
+/**
+ * Pulls and returns value for given key from array.
+ * @param  array $v
+ * @param  mixed $k
+ * @return mixed
+ */
+function array_pull(array & $v, $k, $d = null)
 {
-    $r = $v[$k];
+    $r = $v[$k] ?? $d;
     unset($v[$k]);
     return $r;
 }
