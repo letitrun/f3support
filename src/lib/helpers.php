@@ -48,3 +48,10 @@ function list_unique(array $v): array
 {
     return array_values(array_unique($v));
 }
+
+function array_pull(array & $v, $k)
+{
+    $r = $v[$k];
+    unset($v[$k]);
+    return $r;
+}
