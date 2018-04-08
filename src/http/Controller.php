@@ -25,6 +25,7 @@ abstract class Controller
     {
         $this->f3    = $f3;
         $this->input = [];
+
         parse_str($this->f3->get('QUERY'), $this->query);
     }
 }

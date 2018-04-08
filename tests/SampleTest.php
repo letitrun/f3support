@@ -1,15 +1,9 @@
 <?php
 
-namespace Letitrun\F3Support\Tests;
+namespace Tests\Letitrun\F3Support;
 
-/**
- * Sample test class.
- */
 final class SampleTest extends TestCase
 {
-    /**
-     * Sample test.
-     */
     public function testSample()
     {
         $this->assertTrue(true);

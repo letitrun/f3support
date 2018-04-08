@@ -2,7 +2,7 @@
 
 namespace Letitrun\F3Support\Traits;
 
-trait MakesSingleton
+trait Singleton
 {
     public static $instance;
 

@@ -20,9 +20,9 @@
     },
     "bin": ["bin/f3support"],
     "autoload": {
-        "classmap": ["tests"],
         "psr-4": {
-            "Letitrun\\F3Support\\": "src/"
+            "Letitrun\\F3Support\\": "src/",
+            "Tests\\Letitrun\\F3Support\\": "tests/"
         },
         "files": [
             "src/lib/helpers.php"

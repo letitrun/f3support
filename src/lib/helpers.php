@@ -34,6 +34,29 @@ function env(string $k, $default = null)
 }
 
 /**
+ * HTTP
+ */
+
+/**
+ * Renders/echo JSON to output stream.
+ * @param mixed $v
+ */
+function jsonOk($v)
+{
+    (new \Letitrun\F3Support\Http\Response)->jsonOk($v);
+}
+
+/**
+ * Renders/echo JSON to output stream with error headings.
+ * @param mixed $v
+ * @param int   $code
+ */
+function jsonError($v, int $code = 400)
+{
+    (new \Letitrun\F3Support\Http\Response)->jsonError($v, $code);
+}
+
+/**
  * Arrays
  */
 

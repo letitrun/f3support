@@ -1,10 +1,7 @@
 <?php
 
-namespace Letitrun\F3Support\Tests;
+namespace Tests\Letitrun\F3Support;
 
-/**
- * Abstract base test case.
- */
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
 }

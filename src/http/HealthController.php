@@ -6,6 +6,6 @@ class HealthController extends Controller
 {
     public function getStatus()
     {
-        (new JsonResponse)->ok('Hello, World!');
+        jsonOk('Hello, World!');
     }
 }
