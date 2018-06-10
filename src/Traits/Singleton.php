@@ -6,17 +6,17 @@ trait Singleton
 {
     public static $instance;
 
-    public static function getInstance()
+    public static function instance()
     {
         return static::$instance ?: static::$instance = new static;
     }
 
     protected function __construct()
     {
-        $this->initialize();
+        $this->init();
     }
 
-    protected function initialize()
+    protected function init()
     {
     }
 

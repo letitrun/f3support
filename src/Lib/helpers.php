@@ -1,6 +1,6 @@
 <?php
 /**
- * Various helper methods.
+ * Various helper methods
  */
 
 /**
@@ -8,7 +8,7 @@
  */
 
 /**
- * Gets the value of environment variable.
+ * Gets the value of environment variable
  * @param  string     $k
  * @param  mixed|null $default
  * @return mixed|null
@@ -41,9 +41,9 @@ function env(string $k, $default = null)
  * Renders/echo JSON to output stream.
  * @param mixed $v
  */
-function jsonOk($v)
+function resp_ok($v)
 {
-    (new \Letitrun\F3Support\Http\Response)->jsonOk($v);
+    (new \Letitrun\F3Support\Http\Response)->ok($v);
 }
 
 /**
@@ -51,9 +51,9 @@ function jsonOk($v)
  * @param mixed $v
  * @param int   $code
  */
-function jsonError($v, int $code = 400)
+function resp_error($v, int $code = 400)
 {
-    (new \Letitrun\F3Support\Http\Response)->jsonError($v, $code);
+    (new \Letitrun\F3Support\Http\Response)->error($v, $code);
 }
 
 /**

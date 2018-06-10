@@ -23,9 +23,8 @@ abstract class Controller
 
     public function __construct(Base $f3)
     {
-        $this->f3    = $f3;
+        $this->f3 = $f3;
         $this->input = [];
-
         parse_str($this->f3->get('QUERY'), $this->query);
     }
 }

@@ -27,7 +27,6 @@ class App
         $callback = function (Base $f3) use ($handler) {
             $handler->handle($f3->get('EXCEPTION'));
         };
-
         $this->f3->set('ONERROR', $callback);
     }
 

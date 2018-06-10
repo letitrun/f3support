@@ -4,8 +4,8 @@ namespace Letitrun\F3Support\Http;
 
 class HealthController extends Controller
 {
-    public function getStatus()
+    public function status()
     {
-        jsonOk('Hello, World!');
+        resp_ok('Hello, World!');
     }
 }
